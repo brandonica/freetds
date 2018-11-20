@@ -31,7 +31,7 @@ PKG_NAME="FreeTDS."
 	autoreconf || autoreconf --install
 ) || exit
 
-#conf_flags="--enable-maintainer-mode --enable-compile-warnings" #--enable-iso-c
+conf_flags="--enable-msdblib --prefix=/usr --sysconfdir=/etc/freetds --with-tdsver=7.1 --disable-apps --disable-server --disable-pool --disable-odbc --with-openssl=yes --with-gnutls=yes" #--enable-iso-c
 
 if test x$NOCONFIGURE = x; then
   echo Running $srcdir/configure $conf_flags "$@" '...' \
